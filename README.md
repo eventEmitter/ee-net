@@ -1,6 +1,6 @@
 # ee-net
 
-simple tcp client / server for easy json objects / data transmission supporting tls
+Simple tcp client / server for easy json objects / data transmission supporting tls
 
 ## installation
 
@@ -14,13 +14,13 @@ simple tcp client / server for easy json objects / data transmission supporting 
 
 ## usage
 
-the Server && conenction class do have almost all properties & events of the native node.js «net» API. aee [net API](http://nodejs.org/docs/latest/api/net.html)
+The Server and Connection class do have almost all properties and events of the native node.js «net» API. see [net API](http://nodejs.org/docs/latest/api/net.html)
 
 ### server
 
 #### constructor
 
-the constructor of the server class takes the parameters described at [tls.createServer](http://nodejs.org/docs/latest/api/tls.html#tls_tls_createserver_options_secureconnectionlistener) for a tls enabled server and the parameters described at [net.createServer](http://nodejs.org/docs/latest/api/net.html#net_net_createserver_options_connectionlistener) for non tls mode. you may pass a port and a host parameter as well.
+The constructor of the server class takes the options described at [tls.createServer](http://nodejs.org/docs/latest/api/tls.html#tls_tls_createserver_options_secureconnectionlistener) for a tls enabled server and the options described at [net.createServer](http://nodejs.org/docs/latest/api/net.html#net_net_createserver_options_connectionlistener) for non tls mode. you may pass a port and a host option as well.
 
 	var net = require( "ee-net" );
 
@@ -28,7 +28,7 @@ the constructor of the server class takes the parameters described at [tls.creat
 
 #### «connection» event
 
-the connection event is called when a client has established a new connection on the server
+The connection event is called when a client has established a new connection on the server
 
 	server.on( "connection", function( connection ){
 		// see the «connection» chapter below for the docs on connections
@@ -39,13 +39,13 @@ the connection event is called when a client has established a new connection on
 
 #### constructor
 
-the constructor of the connection class takes the options described at [tls.connect](http://nodejs.org/docs/latest/api/tls.html#tls_tls_connect_port_host_options_callback) for tls enabled connections and the parameters port and host for non tls connections.
+The constructor of the connection class takes the options described at [tls.connect](http://nodejs.org/docs/latest/api/tls.html#tls_tls_connect_port_host_options_callback) for tls enabled connections and the options «port» and «host» for non tls enabled connections.
 
 	var connection = new net.Connection( { host: 10.0.1.2, port: 9999 } );
 
 #### «message» event
 
-the message event is called when a message was received and decoeded successfully
+The message event is called when a message was received and decoeded successfully
 
 	connection.on( "message", function( message ){
 		log( message );
@@ -53,13 +53,13 @@ the message event is called when a message was received and decoeded successfull
 
 #### send method
 
-you may transmit messages using the «send» method
+You may transmit messages using the «send» method
 
 	connection.send( { myJSON: "object" } );
 
 #### remote / local property
 
-the remote and local property return the remote / local configuration
+The remote and local property return the remote / local ip / host configuration of the connection
 
 	log( connection.remote ); // { address: 10.0.1.2, family: "IPv4", port: 9999 }
 
@@ -93,4 +93,4 @@ the remote and local property return the remote / local configuration
 
 ### cutom protocol implementation
 
-you may implement custom protocol handlers, see [ee-protocol-json](https://npmjs.org/package/ee-protocol-json) for more information. you may pass it to the constructors of the Server / Connection using the «protocol» property of the options object.
+You may implement custom protocol handlers, see [ee-protocol-json](https://npmjs.org/package/ee-protocol-json) for more information. You may pass an alternative protocol implementation to the constructors of the Server / Connection using the «protocol» property of the options object.
