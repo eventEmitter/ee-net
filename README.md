@@ -4,7 +4,7 @@ Simple tcp client / server for easy json objects / data transmission supporting 
 
 ## installation
 
-	npm install ee-net ee-protocol-json
+	npm install ee-net
 
 
 ## build status

@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-net"
     , "description"                 : "simple tcp client / server for easy json objects / data transmission"
-    , "version"                     : "0.1.1"
+    , "version"                     : "0.1.2"
     , "homepage"                    : "https://github.com/eventEmitter/ee-net"
     , "author"                      : "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
     , "licence"                     : "mit"
@@ -28,7 +28,7 @@
     }
     , "devDependencies": {}
     , "optionalDependencies": {}
-    , "keywords":                   [ "cleint", "server", "json", "net" ]
+    , "keywords":                   [ "client", "server", "json", "net" ]
     , "scripts": {
         "test"                      : "node test.js"
     }
