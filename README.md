@@ -1,5 +1,7 @@
 # ee-net
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/ee-net.svg)](https://greenkeeper.io/)
+
 Simple tcp client / server for easy json objects / data transmission supporting tls
 
 ## installation
