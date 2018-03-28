@@ -22,7 +22,7 @@
         , "ee-options"              : "*"
         , "ee-arguments"            : "*"
         , "ee-types"                : "*"
-        , "ee-log"                  : "*"
+        , "ee-log"                  : ">=3.0.6"
         , "ee-error"                : "*"
         , "ee-protocol-json"        : "*"
     }
