@@ -18,10 +18,10 @@
     , "dependencies": {
           "ee-class"                : "*"
         , "ee-event-emitter"        : "*"
-        , "ee-types"                : "*"
+        , "ee-types"                : ">=3.0.1"
         , "ee-options"              : "*"
         , "ee-arguments"            : "*"
-        , "ee-types"                : "*"
+        , "ee-types"                : ">=3.0.1"
         , "ee-log"                  : "*"
         , "ee-error"                : "*"
         , "ee-protocol-json"        : "*"
